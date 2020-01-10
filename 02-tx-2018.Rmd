@@ -1,0 +1,128 @@
+---
+title: "Texas Police Agencies 2018"
+output:
+  html_document:
+    df_print: paged
+knit: (function(inputFile, encoding) { rmarkdown::render(inputFile, encoding = encoding, output_dir = "docs") })
+---
+
+This notebook explores and ranks Texas police agencies according to data from the [FBI Crime Data Explorer](https://crime-data-explorer.fr.cloud.gov/downloads-and-docs). See the [README.md](README.md) for more information.
+
+## Dependencies
+
+I had trouble importing the original data into RStudeio, so you have to run the "01-file-process.ipyng" notebook first, which needs csvkit and jupyter notebooks.
+
+
+```{r setup, echo=T, results='hide', message=F, warning=F}
+library(tidyverse)
+library(janitor)
+```
+
+## Import data
+
+There are some duplicate rows, so we include the `unique()` function.
+
+```{r}
+tx_2018 <- read_csv("data/pe_texas_2018.csv") %>% unique()
+```
+
+
+## Explore
+
+Peek at the data
+
+```{r}
+tx_2018 %>% head()
+```
+
+Get the column names
+
+```{r}
+tx_2018 %>% names()
+```
+
+## Types of agencies
+
+```{r}
+tx_2018 %>% 
+  count(agency_type_name)
+```
+
+## Rank all agencies by officer count
+
+```{r}
+tx_2018 %>% 
+  arrange(officer_ct %>% desc()) %>% 
+  select(pub_agency_name, agency_type_name, pub_agency_unit, officer_ct) %>% 
+  head(50)
+```
+
+## filter to just city & county types
+
+```{r}
+tx_local_2018 <- tx_2018 %>% 
+  filter(agency_type_name %in% c("City","County")) %>% 
+  arrange(officer_ct %>% desc()) %>% 
+  select(pub_agency_name, agency_type_name, pub_agency_unit, officer_ct) %>% 
+  head(30)
+
+tx_local_2018
+```
+
+
+
+## Explore Independent School District:
+
+```{r}
+tx_ed_2018 <- tx_2018 %>% 
+  filter(pub_agency_name == "Independent School District:", officer_ct > 50) %>% 
+  arrange(officer_ct %>% desc()) %>% 
+  select(pub_agency_name, agency_type_name, pub_agency_unit, officer_ct) %>% 
+  head(10)
+
+tx_ed_2018
+```
+
+What is the United school district?
+
+```{r}
+tx_2018 %>% 
+  filter(pub_agency_name == "Independent School District:",  pub_agency_unit == "United") %>% 
+  arrange(officer_ct %>% desc()) %>% 
+  # select(pub_agency_name, agency_type_name, pub_agency_unit, officer_ct) %>% 
+  head()
+
+```
+
+
+## Explore University police
+
+```{r}
+tx_uni_2018 <- tx_2018 %>% 
+  filter(agency_type_name == "University or College") %>% 
+  arrange(officer_ct %>% desc()) %>% 
+    select(pub_agency_name, agency_type_name, pub_agency_unit, officer_ct) %>% 
+  head(10)
+
+tx_uni_2018
+```
+
+## Output files for PIRs
+
+We're going to look at several kinds of agencies:
+
+- Top 10 Universities and Colleges
+- School districts with more than 50 officers
+- City and county together based on officer count to fill out the rest in the class
+
+```{r}
+tx_pir_police_agencies <- bind_rows(
+  tx_uni_2018,
+  tx_ed_2018,
+  tx_local_2018
+)
+
+tx_pir_police_agencies %>% 
+  write_csv("data/tx_pir_police_agencies.csv")
+```
+

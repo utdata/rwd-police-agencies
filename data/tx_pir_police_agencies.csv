@@ -1,0 +1,47 @@
+pub_agency_name,agency_type_name,pub_agency_unit,officer_ct
+University of Texas:,University or College,Austin,92
+Alamo Colleges District,University or College,NA,82
+Texas A&M University:,University or College,College Station,72
+Texas Tech University:,University or College,Lubbock,64
+University of Houston:,University or College,Central Campus,61
+University of Texas:,University or College,Rio Grande Valley,44
+University of North Texas:,University or College,Denton,44
+University of Texas:,University or College,Southwestern Medical School,43
+Baylor University:,University or College,Waco,38
+Texas State University:,University or College,San Marcos,34
+Independent School District:,Other,Houston,192
+Independent School District:,Other,United,84
+Independent School District:,Other,Edinburg,82
+Independent School District:,Other,Austin,75
+Independent School District:,Other,Conroe,61
+Independent School District:,Other,Brownsville,52
+Houston,City,NA,5229
+Dallas,City,NA,3007
+San Antonio,City,NA,2352
+Austin,City,NA,1851
+Fort Worth,City,NA,1694
+Tarrant,County,NA,1245
+El Paso,City,NA,1103
+Arlington,City,NA,673
+Montgomery,County,NA,499
+Corpus Christi,City,NA,443
+Lubbock,City,NA,432
+Dallas,County,NA,422
+Plano,City,NA,408
+Denton,County,NA,407
+Collin,County,NA,399
+Irving,City,NA,354
+Travis,County,NA,348
+Garland,City,NA,344
+McAllen,City,NA,285
+Hidalgo,County,NA,279
+Grand Prairie,City,NA,260
+Killeen,City,NA,251
+Waco,City,NA,249
+Mesquite,City,NA,228
+Williamson,County,NA,223
+McKinney,City,NA,212
+Abilene,City,NA,202
+Brownsville,City,NA,197
+Wichita Falls,City,NA,190
+Frisco,City,NA,186

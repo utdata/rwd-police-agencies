@@ -1,0 +1,40 @@
+---
+title: "Texas Police Agencies (All Years)"
+output:
+  html_document:
+    df_print: paged
+knit: (function(inputFile, encoding) { rmarkdown::render(inputFile, encoding = encoding, output_dir = "docs") })
+---
+
+```{r setup, echo=T, results='hide', message=F, warning=F}
+library(tidyverse)
+library(janitor)
+```
+
+# import all texas years
+
+There are some dupes, so `unique()` is applied.
+
+
+```{r}
+pe_tx <- read_csv("data/pe_texas.csv") %>% unique()
+```
+
+## Austin officer growth
+
+```{r}
+austin_counts <- pe_tx %>% 
+  filter(pub_agency_name == "Austin") %>% 
+  drop_na(officer_ct) %>% 
+  select(data_year, officer_ct)
+```
+
+Show chart
+
+```{r}
+ggplot(austin_counts, aes(x = data_year, y = officer_ct)) +
+  geom_bar(stat = "identity") +
+  # geom_text(aes(label=officer_ct), vjust=-0.45) +
+  labs(title = "Austin officers over time", y = "Number of officers")
+```
+
