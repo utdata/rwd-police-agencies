@@ -1,0 +1,68 @@
+---
+title: "Texas Police Agencies"
+output:
+  html_document:
+    df_print: paged
+knit: (function(inputFile, encoding) { rmarkdown::render(inputFile, encoding = encoding, output_dir = "docs") })
+---
+
+This notebook explores and ranks Texas police agencies according to data from the [FBI Crime Data Explorer](https://crime-data-explorer.fr.cloud.gov/downloads-and-docs). See the [README.md](README.md) for more information.
+
+[Data dictionary](https://ucr.fbi.gov/crime-in-the-u.s/2017/crime-in-the-u.s.-2017/topic-pages/police-employee-data.pdf)
+
+## Dependencies
+
+I had trouble importing the original data into RStudeio, so you have to run the "01-file-process.ipyng" notebook first, which needs csvkit and jupyter notebooks.
+
+
+```{r setup, echo=T, results='hide', message=F, warning=F}
+library(tidyverse)
+library(janitor)
+```
+
+## Import data
+
+```{r}
+tx_2018 <- read_csv("data/pe_texas_2018.csv")
+```
+
+## Explore
+
+Peek at the data
+
+```{r}
+tx_2018 %>% head()
+```
+
+Get the column names
+
+```{r}
+tx_2018 %>% names()
+```
+
+## Types of agencies
+
+```{r}
+tx_2018 %>% 
+  count(agency_type_name)
+```
+
+## Rank all agencies by officers
+
+```{r}
+tx_2018 %>% 
+  arrange(officer_ct %>% desc()) %>% 
+  select(pub_agency_name, agency_type_name, pub_agency_unit, officer_ct) %>% 
+  head(50)
+```
+
+## Explore Independent School District:
+
+```{r}
+tx_2018 %>% 
+  filter(pub_agency_name == "Independent School District:") %>% 
+  arrange(officer_ct %>% desc()) %>% 
+  select(pub_agency_name, agency_type_name, pub_agency_unit, officer_ct) %>% 
+  head(10)
+```
+
