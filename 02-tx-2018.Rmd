@@ -6,7 +6,7 @@ output:
 knit: (function(inputFile, encoding) { rmarkdown::render(inputFile, encoding = encoding, output_dir = "docs") })
 ---
 
-This notebook explores and ranks Texas police agencies according to data from the [FBI Crime Data Explorer](https://crime-data-explorer.fr.cloud.gov/downloads-and-docs). See the [README.md](README.md) for more information.
+This notebook explores and ranks Texas police agencies according to Police Employee Data from the [FBI Crime Data Explorer](https://crime-data-explorer.fr.cloud.gov/downloads-and-docs). See the [README.md](https://github.com/utdata/rwd-police-agencies) for more information.
 
 ## Dependencies
 
@@ -111,9 +111,9 @@ tx_uni_2018
 
 We're going to look at several kinds of agencies:
 
-- Top 10 Universities and Colleges
-- School districts with more than 50 officers
-- City and county together based on officer count to fill out the rest in the class
+- Top 10 Universities and Colleges by officer count.
+- School districts with more than 50 officers.
+- City and county together based on officer count to fill out the rest in the class.
 
 ```{r}
 tx_pir_police_agencies <- bind_rows(
