@@ -63,10 +63,10 @@ tx_2018 %>%
 tx_local_2018 <- tx_2018 %>% 
   filter(agency_type_name %in% c("City","County")) %>% 
   arrange(officer_ct %>% desc()) %>% 
-  select(pub_agency_name, agency_type_name, pub_agency_unit, officer_ct) %>% 
-  head(30)
+  select(pub_agency_name, agency_type_name, pub_agency_unit, officer_ct)
 
 tx_local_2018
+tx_local_2018 %>% write_csv("data/tx_local_2018.csv")
 ```
 
 
@@ -112,13 +112,11 @@ tx_uni_2018
 We're going to look at several kinds of agencies:
 
 - Top 10 Universities and Colleges by officer count.
-- School districts with more than 50 officers.
 - City and county together based on officer count to fill out the rest in the class.
 
 ```{r}
 tx_pir_police_agencies <- bind_rows(
   tx_uni_2018,
-  tx_ed_2018,
   tx_local_2018
 )
 
@@ -126,3 +124,4 @@ tx_pir_police_agencies %>%
   write_csv("data/tx_pir_police_agencies.csv")
 ```
 
+Of note, I'm not using school districts in the above list,
