@@ -107,12 +107,64 @@ tx_uni_2018 <- tx_2018 %>%
 tx_uni_2018
 ```
 
+## Austin MSA agencies
+
+Putting together a list of Austin MSA agencies for another project, utdata/rwd-r-leso. 
+
+```{r centex}
+centex_name <- c(
+  "BASTROP",
+  "CALDWELL",
+  "HAYS",
+  "TRAVIS",
+  "WILLIAMSON"
+)
+
+# study to combine name and unit
+# needs removal of NA
+tx_2018 %>% 
+  mutate(
+    agency = paste(pub_agency_name, pub_agency_unit)
+  ) %>%
+  # select(agency) %>% # remove late
+  mutate(
+    agency = str_remove(agency, " NA")
+  )
+
+# create list of non-state agencies in ausitn msa
+austin_msa <- tx_2018 %>% 
+  filter(county_name %in% centex_name) %>% 
+  select(
+    pub_agency_name,
+    pub_agency_unit,
+    county_name,
+    agency_type_name
+  ) %>% 
+  # fix agency name
+  mutate(
+    agency = paste(pub_agency_name, pub_agency_unit),
+    agency = str_remove(agency, " NA")
+  ) %>%
+  select(agency, county_name, agency_type_name) %>% 
+  filter(
+    agency_type_name != "Other State Agency"
+  ) %>% 
+  arrange(county_name, agency_type_name, agency)
+
+## list it
+austin_msa
+
+```
+
+
+
 ## Output files for PIRs
 
 We're going to look at several kinds of agencies:
 
 - Top 10 Universities and Colleges by officer count.
 - City and county together based on officer count to fill out the rest in the class.
+- a list of Austin MSA agencies for another project
 
 ```{r}
 tx_pir_police_agencies <- bind_rows(
@@ -122,6 +174,9 @@ tx_pir_police_agencies <- bind_rows(
 
 tx_pir_police_agencies %>% 
   write_csv("data/tx_pir_police_agencies.csv")
+
+austin_msa %>% 
+  write_csv("data/austin_msa_agencies.csv")
 ```
 
 Of note, I'm not using school districts in the above list,
