@@ -12,7 +12,7 @@ knit: (function(inputFile, encoding) { rmarkdown::render(
 
 # Texas police agencies
 
-This repo gets a list of police agencies for a public information request assignment. The FBI publishes Police Employee data in different formats and the delivery method to the public has changed over the past few years. When this was started in 2020, the most recent data was for 2018.
+This repo gets a list of police agencies for a public information request assignment.
 
 As of this writing in January 2022, the most recent data is 2020 and is found through the FBI's [Crime Data Explorer](https://crime-data-explorer.fr.cloud.gov/pages/home).
 
