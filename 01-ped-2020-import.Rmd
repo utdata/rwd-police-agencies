@@ -1,0 +1,214 @@
+---
+title: "2020 Police Employee Data Import"
+output:
+  html_document:
+    df_print: paged
+knit: (function(inputFile, encoding) { rmarkdown::render(inputFile, encoding = encoding, output_dir = "docs") })
+---
+
+The goal of this notebook is to build a categorized list of police agencies in Texas. See the README for information about where the data comes from.
+
+In this notebook we will:
+
+- Import the four files
+- Clean if necessary
+- Add a category of city, county, school, state, etc
+- Merge the files together
+
+In another notebook we might do further categorization to note agencies from Central Texas if we can find a programattic way to do that.
+
+```{r setup, echo=T, results='hide', message=F, warning=F}
+library(tidyverse)
+library(readxl)
+library(janitor)
+```
+
+We deal with each data file because they have different import strategies
+
+## City agencies
+
+Import the data
+
+```{r city-import}
+city <- read_excel("data-raw/Table_78_Full_time_Law_Enforcement_Employees_Texas_by_Cities_2020.xlsx", skip = 5) %>% clean_names()
+
+city %>% glimpse()
+```
+
+### Clean cities
+
+- add a type
+- rename columns
+
+```{r city-clean}
+city_cleaned <- city %>% 
+  mutate(type = "City") %>% 
+  select(
+    type,
+    agency = city,
+    everything()
+  )
+
+city_cleaned %>% head()
+```
+
+### Pare city
+
+```{r city-pare}
+city_pared <- city_cleaned %>% 
+  select(type, agency, total_officers)
+
+city_pared %>% glimpse()
+```
+
+
+## County agencies
+
+```{r county-import}
+county <- read_excel("data-raw/Table_80_Full_time_Law_Enforcement_Employees_Texas_by_Metropolitan_and_Nonmetropolitan_Counties_2020.xlsx", skip = 5) %>% clean_names()
+
+county %>% head
+```
+
+### Clean counties
+
+- Fill down the metro/non-metro columns
+- create type column
+- rename for consistency
+
+```{r county-clean}
+county_cleaned <- county %>%
+  fill(metropolitan_nonmetropolitan) %>%
+  mutate(
+    metropolitan_nonmetropolitan = str_remove(metropolitan_nonmetropolitan, " Counties"),
+    type = "County"
+  ) %>% 
+  select(
+    type,
+    metro = metropolitan_nonmetropolitan,
+    agency = county,
+    everything()
+  )
+
+county_cleaned %>% head()
+```
+
+### Pare counties
+
+```{r county-pare}
+county_pared <- county_cleaned %>% 
+  select(type, agency, total_officers)
+
+county_pared %>% glimpse()
+```
+
+
+## Universities and Colleges
+
+Two notes from the file:
+
+1 The student enrollment figures provided by the United States Department of Education are for the 2019 school year, the most recent available. The enrollment figures include full-time and part-time students.
+2 Student enrollment figures were not available. (values are blank - crit)
+
+```{r school-import}
+school <- read_excel(
+    "data-raw/Table_79_Full_time_Law_Enforcement_Employees_Texas_by_University_and_College_2020.xlsx",
+    skip = 5,
+    n_max = 69
+  ) %>% clean_names()
+
+school
+```
+
+### Schools clean
+
+- remove some note numbers from school and campus columns
+- add the type
+- reorder/rename columns
+
+```{r school-clean}
+school_cleaned <- school %>% fill(universities_college) %>% 
+  mutate(
+    campus = str_remove(campus, "\\d"),
+    universities_college = str_remove(universities_college, "[:\\d]") %>% trimws(),
+    type = "School"
+  ) %>% 
+  select(
+    type,
+    agency = universities_college,
+    description = campus,
+    student_enrollment = student_enrollment1,
+    everything()
+  )
+
+school_cleaned
+```
+
+### Pare schools
+
+```{r school-pare}
+school_pared <- school_cleaned %>% 
+  select(type, agency, description, total_officers)
+
+school_pared %>% glimpse()
+```
+
+
+## State agencies
+
+```{r state-import}
+state <- read_excel("data-raw/Table_81_Full_time_Law_Enforcement_Employees_Texas_by_State_Tribal_and_Other_Agencies_2020.xlsx", skip = 4) %>% clean_names()
+
+state %>% head(10)
+```
+
+### Clean state agencies
+
+- Fill columns
+- remove `:` from compound names
+- rename/reorder columns
+
+
+```{r state-clean}
+state_cleaned <- state %>% 
+  fill(state_tribal_other, agency) %>% 
+  mutate(
+    agency = str_remove(agency, ":") %>% trimws()
+  ) %>% 
+  select(
+    type = state_tribal_other,
+    agency,
+    description = unit_office,
+    everything()
+  )
+
+state_cleaned %>% head()
+```
+
+### Pare state agencies
+
+```{r state-pare}
+state_pared <- state_cleaned %>% 
+  select(type, agency, description, total_officers)
+
+state_pared %>% glimpse()
+```
+
+## Combining
+
+```{r combine}
+agencies_combined <- school_pared %>% 
+  bind_rows(state_pared) %>% 
+  bind_rows(county_pared) %>% 
+  bind_rows(city_pared)
+
+agencies_combined %>% glimpse()
+```
+
+## Export
+
+```{r export}
+agencies_combined %>% write_rds("data-processed/ped_texas_2020.rds")
+agencies_combined %>% write_csv("data-processed/ped_texas_2020.csv")
+```
+

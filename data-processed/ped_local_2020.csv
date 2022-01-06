@@ -1,0 +1,58 @@
+type,agency,total_officers,geo_category
+City,Austin,1738,city_msa
+City,Round Rock,172,city_msa
+City,San Marcos,109,city_msa
+City,Cedar Park,94,city_msa
+City,Georgetown,88,city_msa
+City,Pflugerville,85,city_msa
+City,Leander,64,city_msa
+City,Kyle,53,city_msa
+City,Hutto,44,city_msa
+City,Manor,27,city_msa
+City,Buda,22,city_msa
+City,Elgin,22,city_msa
+City,Bastrop,21,city_msa
+City,Bee Cave,19,city_msa
+City,Lago Vista,18,city_msa
+City,Liberty Hill,14,city_msa
+City,West Lake Hills,14,city_msa
+City,Sunset Valley,13,city_msa
+City,Jonestown,9,city_msa
+City,Rollingwood,9,city_msa
+City,Jarrell,6,city_msa
+City,Mustang Ridge,5,city_msa
+City,Granger,2,city_msa
+City,Thrall,2,city_msa
+City,Killeen,235,city_outer
+City,Temple,146,city_outer
+City,New Braunfels,137,city_outer
+City,Schertz,61,city_outer
+City,Seguin,57,city_outer
+City,Harker Heights,53,city_outer
+City,Copperas Cove,50,city_outer
+City,Cibolo,37,city_outer
+City,Belton,35,city_outer
+City,Selma,28,city_outer
+City,Marble Falls,22,city_outer
+City,Horseshoe Bay,21,city_outer
+City,Burnet,19,city_outer
+City,Gonzales,18,city_outer
+City,Bulverde,16,city_outer
+City,Giddings,12,city_outer
+City,La Grange,12,city_outer
+City,Garden Ridge,11,city_outer
+City,Granite Shoals,11,city_outer
+County,Travis,348,county_msa
+County,Williamson,251,county_msa
+County,Hays,179,county_msa
+County,Bastrop,82,county_msa
+County,Caldwell,36,county_msa
+County,Comal,177,county_outer
+County,Guadalupe,104,county_outer
+County,Bell,101,county_outer
+County,Burnet,54,county_outer
+County,Llano,24,county_outer
+County,Milam,24,county_outer
+County,Gonzales,20,county_outer
+County,Blanco,17,county_outer
+County,Lee,14,county_outer

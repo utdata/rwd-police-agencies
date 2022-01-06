@@ -5,7 +5,7 @@
 
 # big file exclude
 
-data/pe_1960_2018.csv
+data-raw/pe_1960_2018.csv
 
 ### JupyterNotebooks ###
 # gitignore template for Jupyter Notebooks

@@ -1,0 +1,231 @@
+---
+title: "Police Employees Data - PIR Spring 2022 setup"
+output:
+  html_document:
+    df_print: paged
+knit: (function(inputFile, encoding) { rmarkdown::render(inputFile, encoding = encoding, output_dir = "docs") })
+---
+
+Paring down data for a specific Public Information Request assignment for Spring 2020 Reporting with data.
+
+Unfortunately the original data doesn't have county or any way for me to find agencies close to Central Texas, so really all I can do is get the agencies together and then manually note them.
+
+It is not ideal, but at least scripted so I can make fixes.
+
+```{r setup, echo=T, results='hide', message=F, warning=F}
+library(tidyverse)
+```
+
+
+## Import
+
+```{r import}
+agencies <- read_rds("data-processed/ped_texas_2020.rds")
+```
+
+## Filter to city and county
+
+```{r pare}
+ctycnty <- agencies %>% 
+  filter(type %in% c("County", "City")) %>% 
+  select(!description)
+```
+
+
+## Find Central Texas cities
+
+- Name the cities in a list
+- modify the data to create a logical column
+
+### Make the list
+
+These are hand-built lists based on a lot of googling, and subject to error. There are cities listed that are NOT in the data, and that should be OK.
+
+```{r}
+county_msa <- c(
+  "Bastrop",
+  "Caldwell",
+  "Hays",
+  "Travis",
+  "Williamson"
+)
+
+county_outer <- c(
+  "Bell",
+  "Blanco",
+  "Burnet",
+  "Fayette",
+  "Gillispie",
+  "Guadalupe",
+  "Gonzales",
+  "Comal",
+  "Lee",
+  "Llano",
+  "Milam"
+)
+
+city_msa <- c(
+  # Bastrop
+  "Bastrop",
+  "Elgin",
+  "Smithville",
+  
+  # Caldwell
+  "Lockhart",
+  "Luling",
+  "Martindale",
+  
+  # Hays
+  "Buda",
+  "Dripping Springs",
+  "Kyle",
+  "San Marcos",
+  "Wimberley",
+  
+  # Travis 
+  "Austin",
+  "Cedar Park",
+  "Leander",
+  "Bee Cave",
+  "Jonestown",
+  "Lago Vista",
+  "Lakeway",
+  "Manor",
+  "Mustang Ridge",
+  "Pflugerville",
+  "Rollingwood",
+  "Sunset Valley",
+  "West Lake Hills",
+  
+  # Williamson County
+  "Barlett",
+  "Coupland",
+  "Florence",
+  "Georgetown",
+  "Granger",
+  "Round Rock",
+  "Hutto",
+  "Jarrell",
+  "Liberty Hill",
+  "Taylor",
+  "Thorndale",
+  "Thrall",
+  "Weir"
+)
+
+city_outer <- c(
+  # Bell
+  "Bartlett",
+  "Belton",
+  "Copperas Cove",
+  "Harker Heights",
+  "Killeen",
+  "Nolanville",
+  "Pendleton",
+  "Salado",
+  "Temple",
+  "Troy",
+  
+  # Blanco
+  "Blanco",
+  "Hye",
+  "Johnson City",
+  "Round Mountain",
+  
+  # Burnet
+  "Bertram",
+  "Briggs",
+  "Burnet",
+  "Granite Shoals",
+  "Horseshoe Bay",
+  "Marble Falls",
+  
+  # Comal
+  "Bulverde",
+  "Canyon Lake",
+  "Garden Ridge",
+  "New Braunfels",
+  "Schertz",
+  "Selma",
+  "Spring Branch",
+  
+  # Fayette
+  "Carmine",
+  "Ellinger",
+  "Fayetteville",
+  "La Grange",
+  "Schulenberg",
+  
+  # Gillispie
+  "Fredericksberg",
+  "Harper",
+  "Doss",
+  "Albert",
+  "Stonewall",
+  "Luckenbach",
+  
+  # Guadalupe
+  "Cibolo",
+  "Geronimmo",
+  "Kingsbury",
+  "Marion",
+  "Mc Queeney",
+  "New Berlin",
+  "Santa Clara",
+  "Seguin",
+  "Staples",
+  
+  # Gonzales
+  "Gonzales",
+  "Nixon",
+  "Waelder",
+  
+  # Lee
+  "Dime Box",
+  "Giddings",
+  "Lexington",
+  "Lincoln",
+  
+  # Llano
+  "Llano",
+  
+  # Milam
+  "Cameron",
+  "Rockdale",
+  "Thorndale"
+)
+
+
+```
+
+### Make it happen
+
+```{r}
+agencies_category <- ctycnty %>% 
+  mutate(geo_category = case_when(
+    type == "City" & agency %in% city_msa ~ "city_msa",
+    type == "City" & agency %in% city_outer ~ "city_outer",
+    type == "County" & agency %in% county_msa ~ "county_msa",
+    type == "County" & agency %in% county_outer ~ "county_outer"
+  ))
+
+agencies_category %>% 
+  count(geo_category)
+```
+
+### Filter to these local agencies
+
+```{r local-filter}
+local_agencies <- agencies_category %>% 
+  filter(!is.na(geo_category)) %>% 
+  arrange(geo_category, -total_officers) %>% 
+  filter(!(geo_category == "city_outer" & total_officers <= 10 ))
+
+local_agencies
+```
+
+```{r local-export}
+local_agencies %>% write_csv("data-processed/ped_local_2020.csv")
+local_agencies %>% write_rds("data-processed/ped_local_2020.rds")
+```
+

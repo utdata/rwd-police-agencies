@@ -10,7 +10,9 @@ This notebook explores and ranks Texas police agencies according to Police Emplo
 
 ## Dependencies
 
-I had trouble importing the original data into RStudeio, so you have to run the "01-file-process.ipyng" notebook first, which needs csvkit and jupyter notebooks.
+I had trouble importing the original data into RStudio, so you have to run the "01-file-process.ipynb" notebook first, which needs csvkit and jupyter notebooks.
+
+> Note directory structure has changed and the python notebook above ^^^ may not work
 
 
 ```{r setup, echo=T, results='hide', message=F, warning=F}
@@ -23,7 +25,7 @@ library(janitor)
 There are some duplicate rows, so we include the `unique()` function.
 
 ```{r}
-tx_2018 <- read_csv("data/pe_texas_2018.csv") %>% unique()
+tx_2018 <- read_csv("data-processed/pe_texas_2018.csv") %>% unique()
 ```
 
 
@@ -173,10 +175,10 @@ tx_pir_police_agencies <- bind_rows(
 )
 
 tx_pir_police_agencies %>% 
-  write_csv("data/tx_pir_police_agencies.csv")
+  write_csv("data-processed/tx_pir_police_agencies.csv")
 
 austin_msa %>% 
-  write_csv("data/austin_msa_agencies.csv")
+  write_csv("data-processed/austin_msa_agencies.csv")
 ```
 
 Of note, I'm not using school districts in the above list,
