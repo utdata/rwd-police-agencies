@@ -36,6 +36,8 @@ See the following notebooks for more:
 - [01-ped-2020-import](01-ped-2020-import.Rmd) | [Published notebook](https://utdata.github.io/rwd-police-agencies/01-ped-2020-import.html)
 - [02-ped-2020-pir-sp22](02-ped-2020-pir-sp22.Rmd) | [Published notebook](https://utdata.github.io/rwd-police-agencies/02-ped-2020-pir-sp22.html)
 
+Work on this project was enabled by the album [Here in the Black - Live at Hollywood Forever Cemetery](https://music.apple.com/us/album/here-in-the-black-live-at-hollywood-forever-cemetery/1080378200) by Gary Numan.
+
 ## Previous work
 
 > The file structure of the repo was changed in January 2022 so previous work will fail but it is retained for posterity.
