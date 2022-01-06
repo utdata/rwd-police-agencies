@@ -1,3 +1,15 @@
+---
+output:
+  html_document:
+    df_print: paged
+knit: (function(inputFile, encoding) { rmarkdown::render(
+    inputFile,
+    encoding = encoding,
+    output_dir = "docs",
+    output_file='index.html'
+  ) })
+---
+
 # Texas police agencies
 
 This repo gets a list of police agencies for a public information request assignment. The FBI publishes Police Employee data in different formats and the delivery method to the public has changed over the past few years. When this was started in 2020, the most recent data was for 2018.
@@ -17,12 +29,12 @@ This gives you a zip file with a ton of data including folders called **Table XX
 - 80 is County Agencies
 - 81 is State, Tribal, and Other Agencies
 
-The **Texas** files were pulled from the archive and put in the `data-raw` folder.
+The **Texas** files were pulled from the archive and put in the `data-raw` folder. The download does include full nation files for each table that could be used instead if states other than Texas were desired.
 
 See the following notebooks for more:
 
-- [01-ped-import-2020.Rmd]
-- [02-ped-analysis-2020.Rmd]
+- [01-ped-2020-import](01-ped-2020-import.Rmd) | [Published notebook](https://utdata.github.io/rwd-police-agencies/01-ped-2020-import.html)
+- [02-ped-2020-pir-sp22](02-ped-2020-pir-sp22.Rmd) | [Published notebook](https://utdata.github.io/rwd-police-agencies/02-ped-2020-pir-sp22.html)
 
 ## Previous work
 
