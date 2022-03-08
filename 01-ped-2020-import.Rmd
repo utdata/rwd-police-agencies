@@ -21,6 +21,7 @@ In another notebook we might do further categorization to note agencies from Cen
 library(tidyverse)
 library(readxl)
 library(janitor)
+library(DT)
 ```
 
 We deal with each data file because they have different import strategies
@@ -204,6 +205,16 @@ agencies_combined <- school_pared %>%
 
 agencies_combined %>% glimpse()
 ```
+
+
+## Searchable table
+
+```{r}
+agencies_combined %>% 
+  datatable()
+```
+
+
 
 ## Export
 
