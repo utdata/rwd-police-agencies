@@ -1,0 +1,190 @@
+---
+title: "Police Employees Data - PIR Spring 2022 setup"
+output:
+  html_document:
+    df_print: paged
+knit: (function(inputFile, encoding) { rmarkdown::render(inputFile, encoding = encoding, output_dir = "docs") })
+---
+
+> MODIFYING FROM LAST YEAR TO FOCUS ON NM, OK BORDER AGENCIES
+
+Paring down data for a specific Public Information Request assignment for Spring 2023 Reporting with data.
+
+Unfortunately the original data doesn't have county or any way for me to find agencies close to the New Mexico and Oklahoma borders, so really all I can do is get the agencies together and then manually note them.
+
+It is not ideal, but at least scripted so I can make fixes.
+
+```{r setup, echo=T, results='hide', message=F, warning=F}
+library(tidyverse)
+library(clipr)
+```
+
+
+## Import
+
+```{r import}
+agencies <- read_rds("data-processed/ped_texas_2021.rds")
+
+agencies |> glimpse()
+```
+
+## Filter to city and county
+
+```{r pare}
+ctycnty <- agencies %>% 
+  filter(type %in% c("County", "City")) %>% 
+  select(!description)
+```
+
+
+## Find cities
+
+- Name the cities in a list
+- modify the data to create a logical column
+
+### Make the list
+
+These are hand-built lists based on a lot of googling, and subject to error. There are cities listed that are NOT in the data, and that should be OK.
+
+[Map](https://geology.com/county-map/texas.shtml)
+
+```{r}
+cities <- c(
+  "Dalhart",
+  "Hartley",
+  "Dumas",
+  "Glenrio",
+  "Adrian",
+  "Vega",
+  "Amarillo",
+  "McLean",
+  "Shamrock",
+  "Canyon",
+  "Tulia",
+  "Plainview",
+  "Muleshoe",
+  "Sudan",
+  "Littlefield",
+  "Lubbock",
+  "Slaton",
+  "Post",
+  "Justiceburg",
+  "Plains",
+  "Brownfield",
+  "Lamesa",
+  "Snyder",
+  "Sweetwater",
+  "El Paso",
+  "Sierra Blanca",
+  "Van Horn",
+  "Fort Stockton",
+  "Sheffield",
+  "Ozona",
+  "Sonora",
+  "Angeles",
+  "Orla",
+  "Pecos",
+  "Pyote",
+  "Monahans",
+  "Odessa",
+  "Midland",
+  "Stanton",
+  "Big Spring",
+  "Coahoma",
+  "Colorado City"
+)
+
+counties <- c(
+  "Dallam",
+  "Hartley",
+  "Moore",
+  "Oldham",
+  "Potter",
+  "Carson",
+  "Gray",
+  "Wheeler",
+  "Deaf Smith",
+  "Randall",
+  "Swisher",
+  "Parmer",
+  "Bailey",
+  "Lamb",
+  "Hale",
+  "Hockley",
+  "Lubbock",
+  "Lynn",
+  "Garza",
+  "Scurry",
+  "Fisher",
+  "Martin",
+  "Howard",
+  "Mitchell",
+  "Nolan",
+  "Taylor",
+  "El Paso",
+  "Hudspeth",
+  "Jeff Davis",
+  "Pecos",
+  "Crockett",
+  "Sutton",
+  "Reeves",
+  "Ward",
+  "Ector",
+  "Midland"
+)
+```
+
+
+### Make it happen
+
+> Needs to be modified
+
+```{r}
+agencies_category <- ctycnty %>% 
+  mutate(geo_category = case_when(
+    type == "City" & agency %in% cities ~ "city_route",
+    type == "County" & agency %in% counties ~ "county_route"
+  ))
+
+agencies_category %>% 
+  count(geo_category)
+```
+
+Show the matching cities
+
+```{r}
+agencies_category |> 
+  filter(geo_category == "city_route")
+```
+
+Some error checking
+
+```{r}
+agencies_category |> 
+  filter(
+    str_like(agency, "Dalhart")
+  )
+```
+
+
+### Filter to these local agencies
+
+We want to snag these border agencies
+
+```{r local-filter}
+border_agencies <- agencies_category %>% 
+  filter(!is.na(geo_category)) |> 
+  arrange(-total_officers)
+
+border_agencies
+```
+
+
+
+
+```{r local-export}
+border_agencies %>% write_rds("data-processed/border_agencies_2021.rds")
+
+border_agencies |> write_clip(allow_non_interactive = TRUE)
+```
+

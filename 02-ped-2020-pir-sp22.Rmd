@@ -198,6 +198,7 @@ city_outer <- c(
 
 ```
 
+
 ### Make it happen
 
 ```{r}
@@ -223,6 +224,9 @@ local_agencies <- agencies_category %>%
 
 local_agencies
 ```
+
+
+
 
 ```{r local-export}
 local_agencies %>% write_csv("data-processed/ped_local_2020.csv")

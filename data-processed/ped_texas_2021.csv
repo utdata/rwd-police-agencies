@@ -1,0 +1,973 @@
+type,agency,description,total_officers
+College,Alvin Community College,NA,9
+College,Amarillo College,NA,10
+College,Angelo State University,NA,14
+College,Austin College,NA,8
+College,Austin Community College District,NA,94
+College,Baylor Health Care System,NA,46
+College,Brazosport College,NA,10
+College,Central Texas College,NA,7
+College,Cisco College,NA,1
+College,Concordia University,NA,6
+College,Dallas County Community College District,NA,115
+College,Hardin-Simmons University,NA,4
+College,Houston Community College,NA,65
+College,Kilgore College,NA,5
+College,Lamar University,Beaumont,29
+College,Lone Star College System District,NA,105
+College,Lubbock Christian University,NA,2
+College,McLennan Community College,NA,11
+College,Midwestern State University,NA,11
+College,Odessa College,NA,7
+College,Panola College,NA,4
+College,Paris Junior College,NA,5
+College,Prairie View A&M University,NA,31
+College,Rice University,NA,26
+College,Sam Houston State University,NA,27
+College,San Jacinto College,Central Campus,30
+College,Southern Methodist University,NA,27
+College,South Plains College,NA,6
+College,Southwestern Christian College,NA,2
+College,Southwestern University,NA,7
+College,St. Edwards University,NA,9
+College,Stephen F. Austin State University,NA,25
+College,St. Mary's University,NA,14
+College,St. Thomas University,NA,9
+College,Sul Ross State University,NA,4
+College,Tarleton State University,NA,18
+College,Texas A&M University,College Station,69
+College,Texas A&M University,Commerce,24
+College,Texas A&M University,San Antonio,15
+College,Texas Christian University,NA,28
+College,Texas State Technical College,Harlingen,10
+College,Texas State Technical College,Waco,5
+College,Texas State Technical College,West Texas,4
+College,Texas State University,San Marcos,24
+College,Texas Tech University,Lubbock,65
+College,Texas Woman's University,NA,18
+College,Trinity Valley Community College,NA,9
+College,Tyler Junior College,NA,16
+College,University of Houston,Central Campus,54
+College,University of Houston,Clearlake,16
+College,University of Houston,Downtown Campus,21
+College,University of North Texas,Denton,42
+College,University of Texas,Arlington,40
+College,University of Texas,Austin,84
+College,University of Texas,Dallas,25
+College,University of Texas,El Paso,21
+College,University of Texas,"Health Science Center, San Antonio",37
+College,University of Texas,"Health Science Center, Tyler",8
+College,University of Texas,Houston,72
+College,University of Texas,Medical Branch,67
+College,University of Texas,Permian Basin,18
+College,University of Texas,Rio Grande Valley,43
+College,University of Texas,San Antonio,40
+College,University of Texas,Southwestern Medical School,45
+College,University of Texas,Tyler,9
+College,West Texas A&M University,NA,20
+Tribal Agencies,Ysleta del Sur Pueblo Tribal,NA,16
+Other Agencies,Amarillo International Airport,NA,12
+Other Agencies,Dallas-Fort Worth International Airport,NA,200
+Other Agencies,Denton County Water District,NA,15
+Other Agencies,Ector County Hospital District,NA,12
+Other Agencies,Hidalgo County Constable,Precinct 1,17
+Other Agencies,Hospital District,Tarrant County,47
+Other Agencies,Houston Metropolitan Transit Authority,NA,193
+Other Agencies,Independent School District,Aldine,65
+Other Agencies,Independent School District,Alief,42
+Other Agencies,Independent School District,Alvin,36
+Other Agencies,Independent School District,Angleton,11
+Other Agencies,Independent School District,Anna,4
+Other Agencies,Independent School District,Aubrey,3
+Other Agencies,Independent School District,Austin,74
+Other Agencies,Independent School District,Barbers Hill,7
+Other Agencies,Independent School District,Bastrop,12
+Other Agencies,Independent School District,Bay City,7
+Other Agencies,Independent School District,Brazosport,21
+Other Agencies,Independent School District,Brownsboro,2
+Other Agencies,Independent School District,Brownsville,55
+Other Agencies,Independent School District,Burkburnett,3
+Other Agencies,Independent School District,Calhoun County,2
+Other Agencies,Independent School District,Castleberry,3
+Other Agencies,Independent School District,Centerpoint,2
+Other Agencies,Independent School District,Columbia-Brazoria,6
+Other Agencies,Independent School District,Conroe,72
+Other Agencies,Independent School District,Corsicana,11
+Other Agencies,Independent School District,Crowley,14
+Other Agencies,Independent School District,Ector County,27
+Other Agencies,Independent School District,Edinburg,82
+Other Agencies,Independent School District,El Paso,37
+Other Agencies,Independent School District,Floresville,5
+Other Agencies,Independent School District,Fort Bend,75
+Other Agencies,Independent School District,Gonzales,1
+Other Agencies,Independent School District,Hallsville,5
+Other Agencies,Independent School District,Houston,189
+Other Agencies,Independent School District,Humble,43
+Other Agencies,Independent School District,Hutto,8
+Other Agencies,Independent School District,Idalou,1
+Other Agencies,Independent School District,Jonesboro,1
+Other Agencies,Independent School District,Judson,23
+Other Agencies,Independent School District,Killeen,26
+Other Agencies,Independent School District,Klein,49
+Other Agencies,Independent School District,Lamar Consolidated,22
+Other Agencies,Independent School District,Lancaster,9
+Other Agencies,Independent School District,Laredo,40
+Other Agencies,Independent School District,Lufkin,13
+Other Agencies,Independent School District,Lyford,5
+Other Agencies,Independent School District,Mansfield,54
+Other Agencies,Independent School District,Marlin,1
+Other Agencies,Independent School District,McAllen,62
+Other Agencies,Independent School District,Midland,18
+Other Agencies,Independent School District,Montgomery County,13
+Other Agencies,Independent School District,Northside,102
+Other Agencies,Independent School District,Pasadena,33
+Other Agencies,Independent School District,Pecos Barstow Toyah,10
+Other Agencies,Independent School District,Pflugerville,25
+Other Agencies,Independent School District,Pleasanton,3
+Other Agencies,Independent School District,Rio Grande City,19
+Other Agencies,Independent School District,Roma,11
+Other Agencies,Independent School District,Round Rock,29
+Other Agencies,Independent School District,Royal,3
+Other Agencies,Independent School District,San Antonio,58
+Other Agencies,Independent School District,Santa Fe,11
+Other Agencies,Independent School District,Sealy,4
+Other Agencies,Independent School District,Socorro,48
+Other Agencies,Independent School District,Spring,52
+Other Agencies,Independent School District,Spring Branch,41
+Other Agencies,Independent School District,Taft,2
+Other Agencies,Independent School District,Terrell,6
+Other Agencies,Independent School District,Trinity,3
+Other Agencies,Independent School District,United,88
+Other Agencies,Independent School District,Van Vleck,1
+Other Agencies,Independent School District,Vensus,1
+Other Agencies,Independent School District,Warren,1
+Other Agencies,Independent School District,Wharton,3
+Other Agencies,Independent School District,Whitesboro,1
+Other Agencies,Independent School System,Huntington,5
+Other Agencies,Independent School System,Nacogdoches,8
+Other Agencies,Montgomery County Constable,Precinct 1,51
+Other Agencies,Montgomery County Constable,Precinct 3,60
+Other Agencies,Port of Brownsville,NA,12
+Other Agencies,Port of Houston Authority,NA,36
+Other Agencies,Sabine County Constable,Precinct 2,1
+Other Agencies,University Medical Center,NA,10
+County,Atascosa,NA,42
+County,Austin,NA,35
+County,Bandera,NA,33
+County,Bastrop,NA,81
+County,Bell,NA,114
+County,Bexar,NA,578
+County,Bowie,NA,32
+County,Brazoria,NA,145
+County,Brazos,NA,98
+County,Burleson,NA,27
+County,Caldwell,NA,34
+County,Callahan,NA,6
+County,Cameron,NA,101
+County,Carson,NA,9
+County,Chambers,NA,67
+County,Clay,NA,16
+County,Collin,NA,139
+County,Comal,NA,162
+County,Coryell,NA,34
+County,Crosby,NA,10
+County,Dallas,NA,457
+County,Denton,NA,178
+County,Ector,NA,89
+County,Ellis,NA,87
+County,El Paso,NA,255
+County,Fort Bend,NA,548
+County,Galveston,NA,325
+County,Goliad,NA,16
+County,Grayson,NA,63
+County,Gregg,NA,97
+County,Hardin,NA,37
+County,Harris,NA,2327
+County,Harrison,NA,49
+County,Hays,NA,174
+County,Hidalgo,NA,274
+County,Hudspeth,NA,16
+County,Hunt,NA,46
+County,Irion,NA,6
+County,Jefferson,NA,134
+County,Johnson,NA,90
+County,Jones,NA,9
+County,Kaufman,NA,89
+County,Kendall,NA,50
+County,Lampasas,NA,14
+County,Liberty,NA,73
+County,Lubbock,NA,194
+County,Lynn,NA,7
+County,Martin,NA,9
+County,McLennan,NA,110
+County,Medina,NA,47
+County,Midland,NA,84
+County,Montgomery,NA,500
+County,Nueces,NA,40
+County,Oldham,NA,5
+County,Orange,NA,60
+County,Parker,NA,96
+County,Potter,NA,90
+County,Randall,NA,86
+County,Robertson,NA,15
+County,Rockwall,NA,54
+County,Rusk,NA,39
+County,Smith,NA,175
+County,Sterling,NA,5
+County,Tarrant,NA,1230
+County,Taylor,NA,77
+County,Tom Green,NA,185
+County,Travis,NA,339
+County,Upshur,NA,50
+County,Victoria,NA,78
+County,Waller,NA,63
+County,Webb,NA,139
+County,Wichita,NA,61
+County,Williamson,NA,181
+County,Wilson,NA,34
+County,Wise,NA,64
+County,Angelina,NA,38
+County,Bailey,NA,8
+County,Baylor,NA,4
+County,Bee,NA,25
+County,Blanco,NA,15
+County,Borden,NA,3
+County,Bosque,NA,21
+County,Brewster,NA,18
+County,Briscoe,NA,4
+County,Brooks,NA,16
+County,Brown,NA,29
+County,Burnet,NA,53
+County,Calhoun,NA,28
+County,Camp,NA,10
+County,Cass,NA,19
+County,Castro,NA,6
+County,Cherokee,NA,34
+County,Childress,NA,4
+County,Cochran,NA,7
+County,Coke,NA,5
+County,Collingsworth,NA,3
+County,Colorado,NA,23
+County,Comanche,NA,20
+County,Concho,NA,8
+County,Cooke,NA,35
+County,Crane,NA,9
+County,Crockett,NA,10
+County,Dallam,NA,6
+County,Dawson,NA,9
+County,Deaf Smith,NA,10
+County,Delta,NA,10
+County,DeWitt,NA,19
+County,Donley,NA,5
+County,Duval,NA,22
+County,Eastland,NA,13
+County,Edwards,NA,7
+County,Erath,NA,27
+County,Floyd,NA,6
+County,Foard,NA,2
+County,Franklin,NA,13
+County,Freestone,NA,16
+County,Gaines,NA,19
+County,Garza,NA,8
+County,Gillespie,NA,31
+County,Glasscock,NA,5
+County,Gonzales,NA,20
+County,Gray,NA,14
+County,Grimes,NA,30
+County,Hall,NA,4
+County,Hamilton,NA,11
+County,Hansford,NA,7
+County,Hardeman,NA,8
+County,Hartley,NA,6
+County,Haskell,NA,3
+County,Hemphill,NA,8
+County,Henderson,NA,49
+County,Hill,NA,30
+County,Hockley,NA,14
+County,Hood,NA,55
+County,Hopkins,NA,26
+County,Houston,NA,22
+County,Howard,NA,24
+County,Hutchinson,NA,14
+County,Jack,NA,15
+County,Jackson,NA,15
+County,Jasper,NA,20
+County,Jeff Davis,NA,4
+County,Jim Hogg,NA,11
+County,Jim Wells,NA,56
+County,Karnes,NA,31
+County,Kenedy,NA,12
+County,Kerr,NA,51
+County,Kimble,NA,6
+County,King,NA,2
+County,Kleberg,NA,27
+County,Lamar,NA,32
+County,Lamb,NA,9
+County,La Salle,NA,21
+County,Lavaca,NA,14
+County,Lee,NA,13
+County,Leon,NA,23
+County,Limestone,NA,18
+County,Lipscomb,NA,5
+County,Llano,NA,29
+County,Loving,NA,7
+County,Madison,NA,13
+County,Marion,NA,18
+County,Mason,NA,6
+County,Matagorda,NA,33
+County,McCulloch,NA,8
+County,Milam,NA,23
+County,Mills,NA,9
+County,Montague,NA,12
+County,Moore,NA,19
+County,Motley,NA,1
+County,Nacogdoches,NA,37
+County,Navarro,NA,44
+County,Newton,NA,15
+County,Nolan,NA,16
+County,Ochiltree,NA,8
+County,Palo Pinto,NA,25
+County,Panola,NA,40
+County,Parmer,NA,7
+County,Polk,NA,46
+County,Presidio,NA,6
+County,Rains,NA,13
+County,Reagan,NA,13
+County,Real,NA,5
+County,Red River,NA,11
+County,Refugio,NA,18
+County,Roberts,NA,5
+County,Runnels,NA,6
+County,Sabine,NA,10
+County,San Augustine,NA,10
+County,Schleicher,NA,5
+County,Scurry,NA,10
+County,Shackelford,NA,6
+County,Shelby,NA,16
+County,Somervell,NA,22
+County,Starr,NA,46
+County,Sutton,NA,6
+County,Swisher,NA,5
+County,Terrell,NA,3
+County,Terry,NA,9
+County,Throckmorton,NA,2
+County,Titus,NA,23
+County,Trinity,NA,14
+County,Tyler,NA,15
+County,Upton,NA,11
+County,Uvalde,NA,25
+County,Val Verde,NA,47
+County,Van Zandt,NA,26
+County,Walker,NA,41
+County,Ward,NA,17
+County,Washington,NA,33
+County,Wharton,NA,39
+County,Wheeler,NA,10
+County,Wilbarger,NA,8
+County,Willacy,NA,21
+County,Winkler,NA,11
+County,Wood,NA,33
+County,Yoakum,NA,23
+County,Zapata,NA,75
+County,Zavala,NA,18
+City,Abernathy,NA,5
+City,Abilene,NA,210
+City,Addison,NA,66
+City,Alamo,NA,32
+City,Alamo Heights,NA,21
+City,Alba,NA,2
+City,Alice,NA,33
+City,Alpine,NA,9
+City,Alvarado,NA,16
+City,Alvin,NA,53
+City,Amarillo,NA,345
+City,Andrews,NA,19
+City,Angleton,NA,34
+City,Anna,NA,29
+City,Anthony,NA,19
+City,Aransas Pass,NA,29
+City,Archer City,NA,2
+City,Arcola,NA,9
+City,Argyle,NA,13
+City,Arlington,NA,674
+City,Arp,NA,7
+City,Athens,NA,25
+City,Atlanta,NA,10
+City,Aubrey,NA,21
+City,Austin,NA,1613
+City,Azle,NA,29
+City,Baird,NA,3
+City,Balch Springs,NA,34
+City,Balcones Heights,NA,18
+City,Ballinger,NA,8
+City,Bartonville,NA,3
+City,Bastrop,NA,22
+City,Bay City,NA,36
+City,Baytown,NA,160
+City,Beaumont,NA,243
+City,Bedford,NA,75
+City,Beeville,NA,19
+City,Bellaire,NA,41
+City,Bellmead,NA,20
+City,Bells,NA,4
+City,Bellville,NA,11
+City,Belton,NA,43
+City,Benbrook,NA,37
+City,Bertram,NA,7
+City,Big Sandy,NA,5
+City,Big Spring,NA,35
+City,Blanco,NA,10
+City,Blue Mound,NA,7
+City,Boerne,NA,39
+City,Bogata,NA,5
+City,Bonham,NA,19
+City,Borger,NA,25
+City,Bovina,NA,3
+City,Bowie,NA,15
+City,Boyd,NA,6
+City,Brady,NA,13
+City,Brazoria,NA,8
+City,Breckenridge,NA,10
+City,Bremond,NA,3
+City,Brenham,NA,36
+City,Bridge City,NA,15
+City,Bridgeport,NA,15
+City,Brookshire,NA,17
+City,Brownfield,NA,18
+City,Brownsboro,NA,4
+City,Brownsville,NA,226
+City,Brownwood,NA,36
+City,Bruceville-Eddy,NA,3
+City,Bryan,NA,143
+City,Buda,NA,24
+City,Buffalo,NA,3
+City,Bullard,NA,12
+City,Bulverde,NA,17
+City,Burkburnett,NA,16
+City,Burleson,NA,82
+City,Burnet,NA,18
+City,Cactus,NA,9
+City,Caddo Mills,NA,9
+City,Caldwell,NA,10
+City,Calvert,NA,4
+City,Cameron,NA,11
+City,Canyon,NA,26
+City,Carrollton,NA,174
+City,Carthage,NA,17
+City,Castle Hills,NA,23
+City,Castroville,NA,9
+City,Cedar Hill,NA,70
+City,Cedar Park,NA,90
+City,Celina,NA,30
+City,Center,NA,18
+City,Chandler,NA,8
+City,Childress,NA,11
+City,China Grove,NA,6
+City,Cibolo,NA,41
+City,Cisco,NA,10
+City,Cleburne,NA,52
+City,Clifton,NA,7
+City,Clint,NA,4
+City,Clute,NA,25
+City,Cockrell Hill,NA,16
+City,Coffee City,NA,4
+City,Coleman,NA,6
+City,College Station,NA,146
+City,Colleyville,NA,39
+City,Collinsville,NA,4
+City,Columbus,NA,11
+City,Comanche,NA,10
+City,Combes,NA,7
+City,Commerce,NA,17
+City,Conroe,NA,151
+City,Converse,NA,46
+City,Coppell,NA,54
+City,Copperas Cove,NA,52
+City,Corinth,NA,32
+City,Corpus Christi,NA,425
+City,Corrigan,NA,10
+City,Corsicana,NA,39
+City,Crandall,NA,19
+City,Crane,NA,9
+City,Crockett,NA,12
+City,Crowley,NA,26
+City,Cuero,NA,15
+City,Cuney,NA,2
+City,Daingerfield,NA,5
+City,Dallas,NA,3118
+City,Dawson,NA,1
+City,Dayton,NA,19
+City,Decatur,NA,24
+City,Deer Park,NA,60
+City,De Leon,NA,4
+City,Denison,NA,50
+City,Denton,NA,191
+City,Denver City,NA,9
+City,DeSoto,NA,79
+City,Devine,NA,11
+City,Diboll,NA,11
+City,Dickinson,NA,31
+City,Dimmitt,NA,7
+City,Donna,NA,36
+City,Double Oak,NA,8
+City,Driscoll,NA,2
+City,Dublin,NA,9
+City,Dumas,NA,23
+City,Duncanville,NA,58
+City,Earth,NA,1
+City,Eastland,NA,11
+City,Edgewood,NA,4
+City,Edinburg,NA,171
+City,Edna,NA,8
+City,El Campo,NA,27
+City,Electra,NA,8
+City,Elmendorf,NA,4
+City,El Paso,NA,1138
+City,Elsa,NA,18
+City,Emory,NA,4
+City,Ennis,NA,35
+City,Euless,NA,88
+City,Everman,NA,17
+City,Fair Oaks Ranch,NA,21
+City,Fairview,NA,17
+City,Farmers Branch,NA,72
+City,Farmersville,NA,8
+City,Farwell,NA,2
+City,Fate,NA,20
+City,Ferris,NA,11
+City,Florence,NA,4
+City,Floresville,NA,18
+City,Flower Mound,NA,104
+City,Floydada,NA,6
+City,Forney,NA,27
+City,Fort Stockton,NA,19
+City,Fort Worth,NA,1631
+City,Franklin,NA,5
+City,Frankston,NA,7
+City,Fredericksburg,NA,35
+City,Freeport,NA,32
+City,Friendswood,NA,59
+City,Friona,NA,5
+City,Frisco,NA,216
+City,Fulshear,NA,24
+City,Gainesville,NA,43
+City,Galena Park,NA,14
+City,Galveston,NA,141
+City,Ganado,NA,3
+City,Garden Ridge,NA,11
+City,Garland,NA,343
+City,Garrison,NA,1
+City,Gatesville,NA,21
+City,Georgetown,NA,84
+City,Giddings,NA,13
+City,Gilmer,NA,15
+City,Gladewater,NA,17
+City,Glenn Heights,NA,22
+City,Godley,NA,6
+City,Gonzales,NA,21
+City,Gorman,NA,2
+City,Graham,NA,17
+City,Granbury,NA,41
+City,Grand Prairie,NA,278
+City,Grand Saline,NA,10
+City,Granger,NA,3
+City,Grapeland,NA,4
+City,Grapevine,NA,92
+City,Greenville,NA,53
+City,Groesbeck,NA,9
+City,Groves,NA,21
+City,Gun Barrel City,NA,16
+City,Gunter,NA,6
+City,Hallettsville,NA,8
+City,Hallsville,NA,6
+City,Haltom City,NA,75
+City,Hamilton,NA,8
+City,Hamlin,NA,5
+City,Harker Heights,NA,45
+City,Harlingen,NA,134
+City,Haskell,NA,5
+City,Hawkins,NA,3
+City,Hearne,NA,13
+City,Heath,NA,25
+City,Hedwig Village,NA,17
+City,Helotes,NA,30
+City,Hempstead,NA,19
+City,Henderson,NA,36
+City,Hereford,NA,27
+City,Hewitt,NA,29
+City,Hickory Creek,NA,13
+City,Hico,NA,5
+City,Hidalgo,NA,33
+City,Highland Park,NA,61
+City,Highland Village,NA,29
+City,Hill Country Village,NA,11
+City,Hillsboro,NA,22
+City,Hitchcock,NA,17
+City,Hollywood Park,NA,15
+City,Hondo,NA,22
+City,Honey Grove,NA,6
+City,Hooks,NA,7
+City,Horseshoe Bay,NA,21
+City,Houston,NA,5250
+City,Howe,NA,6
+City,Hudson Oaks,NA,11
+City,Hughes Springs,NA,5
+City,Humble,NA,61
+City,Huntington,NA,5
+City,Huntsville,NA,61
+City,Hutchins,NA,20
+City,Hutto,NA,44
+City,Idalou,NA,5
+City,Ingleside,NA,24
+City,Ingram,NA,7
+City,Iowa Colony,NA,8
+City,Iowa Park,NA,12
+City,Irving,NA,380
+City,Italy,NA,8
+City,Itasca,NA,6
+City,Jacinto City,NA,21
+City,Jacksboro,NA,7
+City,Jacksonville,NA,31
+City,Jamaica Beach,NA,7
+City,Jarrell,NA,8
+City,Jasper,NA,21
+City,Jefferson,NA,3
+City,Jersey Village,NA,24
+City,Jonestown,NA,11
+City,Joshua,NA,16
+City,Jourdanton,NA,6
+City,Junction,NA,7
+City,Karnes City,NA,7
+City,Katy,NA,91
+City,Kaufman,NA,16
+City,Keene,NA,12
+City,Keller,NA,47
+City,Kemah,NA,21
+City,Kemp,NA,4
+City,Kempner,NA,5
+City,Kenedy,NA,14
+City,Kennedale,NA,16
+City,Kerens,NA,4
+City,Kermit,NA,11
+City,Kerrville,NA,46
+City,Kilgore,NA,33
+City,Killeen,NA,230
+City,Kingsville,NA,42
+City,Kirby,NA,13
+City,Knox City,NA,2
+City,Kountze,NA,5
+City,Kyle,NA,51
+City,Lacy-Lakeview,NA,12
+City,La Feria,NA,12
+City,Lago Vista,NA,15
+City,La Grange,NA,11
+City,La Grulla,NA,6
+City,Laguna Vista,NA,8
+City,Lake Dallas,NA,11
+City,Lake Jackson,NA,48
+City,Lakeport,NA,3
+City,Lakeside,NA,7
+City,"Lakeview, Harrison County",NA,13
+City,Lakeway,NA,35
+City,Lake Worth,NA,29
+City,La Marque,NA,35
+City,Lampasas,NA,21
+City,Lancaster,NA,56
+City,La Porte,NA,80
+City,Laredo,NA,510
+City,La Villa,NA,8
+City,Lavon,NA,13
+City,League City,NA,125
+City,Leander,NA,66
+City,Leonard,NA,5
+City,Leon Valley,NA,36
+City,Levelland,NA,24
+City,Lewisville,NA,171
+City,Liberty,NA,18
+City,Liberty Hill,NA,15
+City,Lindale,NA,18
+City,Linden,NA,5
+City,Little Elm,NA,79
+City,Littlefield,NA,13
+City,Live Oak,NA,34
+City,Livingston,NA,22
+City,Llano,NA,9
+City,Lockhart,NA,26
+City,Lockney,NA,3
+City,Log Cabin,NA,4
+City,Lone Star,NA,3
+City,Longview,NA,162
+City,Lorena,NA,7
+City,Los Fresnos,NA,25
+City,Lubbock,NA,421
+City,Lufkin,NA,69
+City,Luling,NA,11
+City,Lumberton,NA,18
+City,Lytle,NA,8
+City,Madisonville,NA,11
+City,Magnolia,NA,14
+City,Manor,NA,28
+City,Mansfield,NA,99
+City,Manvel,NA,22
+City,Marble Falls,NA,25
+City,Marfa,NA,4
+City,Marion,NA,3
+City,Marlin,NA,10
+City,Marshall,NA,50
+City,Maud,NA,1
+City,Maypearl,NA,4
+City,McAllen,NA,275
+City,McKinney,NA,225
+City,Meadows Place,NA,17
+City,Melissa,NA,16
+City,Memorial Villages,NA,30
+City,Memphis,NA,2
+City,Mercedes,NA,38
+City,Meridian,NA,3
+City,Merkel,NA,4
+City,Mesquite,NA,232
+City,Mexia,NA,14
+City,Midland,NA,164
+City,Midlothian,NA,68
+City,Miles,NA,2
+City,Mineola,NA,15
+City,Mineral Wells,NA,32
+City,Mission,NA,164
+City,Missouri City,NA,100
+City,Monahans,NA,14
+City,Mont Belvieu,NA,15
+City,Montgomery,NA,14
+City,Morgans Point Resort,NA,9
+City,Moulton,NA,4
+City,Mount Enterprise,NA,1
+City,Mount Pleasant,NA,33
+City,Mount Vernon,NA,8
+City,Muleshoe,NA,6
+City,Murphy,NA,21
+City,Mustang Ridge,NA,4
+City,Nacogdoches,NA,58
+City,Nash,NA,7
+City,Nassau Bay,NA,14
+City,Natalia,NA,4
+City,Navasota,NA,18
+City,Nederland,NA,28
+City,Needville,NA,8
+City,New Boston,NA,12
+City,New Braunfels,NA,139
+City,Newton,NA,4
+City,Nolanville,NA,11
+City,Northeast,NA,6
+City,Northlake,NA,21
+City,North Richland Hills,NA,112
+City,"Oak Ridge, Kaufman County",NA,27
+City,Oak Ridge North,NA,16
+City,Odem,NA,6
+City,Odessa,NA,147
+City,Olmos Park,NA,13
+City,Olney,NA,8
+City,Onalaska,NA,9
+City,Orange,NA,44
+City,Overton,NA,6
+City,Ovilla,NA,11
+City,Oyster Creek,NA,9
+City,Palacios,NA,8
+City,Palestine,NA,33
+City,Palmer,NA,10
+City,Palmhurst,NA,12
+City,Pampa,NA,28
+City,Panhandle,NA,4
+City,Pantego,NA,13
+City,Paris,NA,43
+City,Parker,NA,10
+City,Pasadena,NA,274
+City,Patton Village,NA,10
+City,Payne Springs,NA,2
+City,Pearland,NA,169
+City,Pearsall,NA,15
+City,Pecos,NA,24
+City,Pelican Bay,NA,9
+City,Penitas,NA,15
+City,Perryton,NA,11
+City,Petersburg,NA,4
+City,Pflugerville,NA,86
+City,Pharr,NA,132
+City,Pilot Point,NA,10
+City,Pinehurst,NA,6
+City,Pineland,NA,3
+City,Pittsburg,NA,8
+City,Plainview,NA,30
+City,Plano,NA,416
+City,Pleasanton,NA,22
+City,Ponder,NA,6
+City,Port Aransas,NA,20
+City,Port Arthur,NA,113
+City,Portland,NA,35
+City,Port Lavaca,NA,18
+City,Port Neches,NA,21
+City,Poteet,NA,9
+City,Prairie View,NA,11
+City,Primera,NA,9
+City,Princeton,NA,26
+City,Prosper,NA,35
+City,Queen City,NA,5
+City,Rancho Viejo,NA,8
+City,Ranger,NA,4
+City,Raymondville,NA,12
+City,Red Oak,NA,26
+City,Refugio,NA,6
+City,"Reno, Lamar County",NA,5
+City,Rice,NA,4
+City,Richardson,NA,164
+City,Richland,NA,2
+City,Richland Hills,NA,19
+City,Richmond,NA,29
+City,Richwood,NA,11
+City,Rio Grande City,NA,31
+City,Rio Hondo,NA,7
+City,River Oaks,NA,17
+City,Roanoke,NA,34
+City,Robinson,NA,22
+City,Robstown,NA,20
+City,Rockdale,NA,12
+City,Rockport,NA,27
+City,Rockwall,NA,84
+City,Rogers,NA,3
+City,Rollingwood,NA,7
+City,Roma,NA,24
+City,Roman Forest,NA,11
+City,Roscoe,NA,2
+City,Rosenberg,NA,72
+City,Round Rock,NA,168
+City,Rowlett,NA,93
+City,Royse City,NA,26
+City,Runaway Bay,NA,5
+City,Rusk,NA,9
+City,Sachse,NA,31
+City,Saginaw,NA,38
+City,Salado,NA,5
+City,San Angelo,NA,174
+City,San Antonio,NA,2381
+City,San Augustine,NA,8
+City,San Benito,NA,40
+City,San Elizario,NA,3
+City,Sanger,NA,16
+City,San Marcos,NA,106
+City,San Saba,NA,5
+City,Sansom Park Village,NA,8
+City,Santa Anna,NA,4
+City,Santa Fe,NA,23
+City,Savoy,NA,2
+City,Schertz,NA,62
+City,Schulenburg,NA,8
+City,Seabrook,NA,30
+City,Seagoville,NA,25
+City,Sealy,NA,24
+City,Seguin,NA,52
+City,Selma,NA,30
+City,Seminole,NA,9
+City,Seymour,NA,2
+City,Shallowater,NA,5
+City,Shavano Park,NA,21
+City,Shenandoah,NA,26
+City,Sherman,NA,67
+City,Silsbee,NA,17
+City,Sinton,NA,12
+City,Slaton,NA,10
+City,Smithville,NA,12
+City,Snyder,NA,17
+City,Socorro,NA,44
+City,Somerset,NA,4
+City,Somerville,NA,3
+City,Sonora,NA,6
+City,Sour Lake,NA,8
+City,South Houston,NA,24
+City,Southlake,NA,60
+City,South Padre Island,NA,26
+City,Southside Place,NA,6
+City,Spearman,NA,4
+City,Splendora,NA,14
+City,Spring Valley,NA,20
+City,Stafford,NA,55
+City,Stamford,NA,6
+City,Stanton,NA,6
+City,Stephenville,NA,33
+City,Stinnett,NA,4
+City,Sudan,NA,1
+City,Sugar Land,NA,155
+City,Sulphur Springs,NA,28
+City,Sunnyvale,NA,21
+City,Sunrise Beach Village,NA,5
+City,Sunset Valley,NA,12
+City,Surfside Beach,NA,8
+City,Sweeny,NA,8
+City,Sweetwater,NA,24
+City,Taft,NA,7
+City,Tahoka,NA,4
+City,Tatum,NA,4
+City,Taylor,NA,28
+City,Teague,NA,6
+City,Temple,NA,142
+City,Tenaha,NA,2
+City,Terrell,NA,38
+City,Terrell Hills,NA,16
+City,Texarkana,NA,87
+City,Texas City,NA,86
+City,Thorndale,NA,3
+City,Tioga,NA,4
+City,Tomball,NA,46
+City,Tom Bean,NA,3
+City,Tool,NA,4
+City,Trophy Club,NA,18
+City,Tulia,NA,9
+City,Tye,NA,5
+City,Tyler,NA,191
+City,Universal City,NA,27
+City,University Park,NA,38
+City,Uvalde,NA,40
+City,Valley Mills,NA,4
+City,Van,NA,9
+City,Van Alstyne,NA,13
+City,Venus,NA,14
+City,Vernon,NA,20
+City,Victoria,NA,120
+City,Vidor,NA,31
+City,Waco,NA,253
+City,Waelder,NA,4
+City,Wake Village,NA,8
+City,Waller,NA,11
+City,Wallis,NA,7
+City,Watauga,NA,36
+City,Waxahachie,NA,79
+City,Weatherford,NA,58
+City,Webster,NA,48
+City,Weimar,NA,7
+City,Weslaco,NA,79
+City,West,NA,8
+City,West Columbia,NA,11
+City,West Lake Hills,NA,14
+City,West Orange,NA,10
+City,West University Place,NA,24
+City,Westworth,NA,13
+City,Wharton,NA,23
+City,Whitehouse,NA,14
+City,White Oak,NA,16
+City,White Settlement,NA,32
+City,Whitewright,NA,3
+City,Whitney,NA,6
+City,Wichita Falls,NA,197
+City,Willis,NA,15
+City,Willow Park,NA,18
+City,Wills Point,NA,9
+City,Wilmer,NA,21
+City,Windcrest,NA,27
+City,Wink,NA,2
+City,Winnsboro,NA,12
+City,Winters,NA,6
+City,Wolfforth,NA,13
+City,Woodsboro,NA,1
+City,Woodville,NA,10
+City,Woodway,NA,32
+City,Wortham,NA,4
+City,Wylie,NA,64
+City,Yoakum,NA,11
+City,Zavalla,NA,3

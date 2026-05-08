@@ -14,12 +14,13 @@ knit: (function(inputFile, encoding) { rmarkdown::render(
 
 This repo gets a list of police agencies for a public information request assignment.
 
-As of this writing in January 2022, the most recent data is 2020 and is found through the FBI's [Crime Data Explorer](https://crime-data-explorer.fr.cloud.gov/pages/home).
+As of this writing in January 2023, the most recent data is 2021 and is found through the FBI's [Crime Data Explorer](https://crime-data-explorer.fr.cloud.gov/pages/home).
 
-1. Go to the [Crime Data Explorer](https://crime-data-explorer.fr.cloud.gov/pages/home)
-1. Click on the [Crime data explore downloads](https://crime-data-explorer.app.cloud.gov/pages/downloads) from the menu.
+1. Go to the [Crime Data Explorer](https://cde.ucr.cjis.gov/LATEST/webapp/#/pages/home)
+1. Click on the [Documents &
+Downloads](https://cde.ucr.cjis.gov/LATEST/webapp/#/pages/downloads) from the menu.
 1. Scroll to **Crime in the United States Annual Reports**.
-1. Choose **Police Employee Data** from the dropdown, along with the year
+1. Choose **Law Enforcement Employee Data** from the dropdown, along with the year
 1. Click the **Download** button
 
 This gives you a zip file with a ton of data including folders called **Table XX State Cuts**, with XX being a number between 78 and 81.
